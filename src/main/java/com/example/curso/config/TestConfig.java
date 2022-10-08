@@ -47,6 +47,16 @@ public class TestConfig implements CommandLineRunner {
 		Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
 		Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
 		
+		p1.getCategorias().add(cat2);
+		p2.getCategorias().add(cat1);
+		p2.getCategorias().add(cat3);
+		p3.getCategorias().add(cat3);
+		p4.getCategorias().add(cat3);
+		p5.getCategorias().add(cat2);
+		
+		
+		
+		
 		User u1 = new User(null, "Maria Brown", "maria@gmail.com","9824859384","123456");
 		User u2 = new User(null, "Alex Green", "alex@gmail.com","9384953845","123456");
 		
@@ -64,6 +74,7 @@ public class TestConfig implements CommandLineRunner {
 		
 		orderRepoistory.saveAll(Arrays.asList(o1,o2,o3));
 		
+		productRepository.saveAll(Arrays.asList(p1,p2,p3,p4,p5));
 		
 
 	}
